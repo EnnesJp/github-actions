@@ -5,6 +5,15 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>GestaoDeSoftware</name>
 
+  <resources>
+     <resource>
+       <directory>src/main</directory>
+     </resource>
+     <resource>
+       <directory>src/tests</directory>
+     </resource>
+   </resources>
+
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
     <dependency>
