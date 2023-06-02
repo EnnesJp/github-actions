@@ -6,8 +6,6 @@ import org.junit.After;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
-import org.junit.platform.runner.JUnitPlatform;
 @SuppressWarnings({ "unused", "deprecation" })
 class UsuarioTest {
 	
