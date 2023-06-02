@@ -31,12 +31,12 @@
   <build>
     <resources>
       <resource>
-        <directory>src/main</directory>
+        <directory>src</directory>
       </resource>
     </resources>
     <testResources>
       <testResource>
-        <directory>src/tests</directory>
+        <directory>tests</directory>
       </testResource>
     </testResources>
     <pluginManagement>
@@ -45,6 +45,8 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
+          <sourceDirectory>src</sourceDirectory>
+          <testSourceDirectory>test</testSourceDirectory>
           <configuration>
             <!-- put your configurations here -->
           </configuration>
