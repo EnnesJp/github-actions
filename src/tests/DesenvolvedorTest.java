@@ -12,7 +12,7 @@ import org.junit.platform.runner.JUnitPlatform;
 @SuppressWarnings({ "unused", "deprecation" })
 class DesenvolvedorTest {
 	
-	private final InputStream systemIn = System.in;
+  private final InputStream systemIn = System.in;
   private final PrintStream systemOut = System.out;
 
   private ByteArrayInputStream testIn;
