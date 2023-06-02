@@ -5,6 +5,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>GestaoDeSoftware</name>
 
+  <properties>
+    <src.dir>src</src.dir>
+    <test.dir>tests</test.dir>
+  </properties>
+
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
     <dependency>
@@ -29,14 +34,16 @@
     </dependency>
   </dependencies>
   <build>
+    <sourceDirectory>${src.dir}</sourceDirectory>
+    <testSourceDirectory>${tests.dir}</testSourceDirectory>
     <resources>
       <resource>
-        <directory>src</directory>
+        <directory>${src.dir}</directory>
       </resource>
     </resources>
     <testResources>
       <testResource>
-        <directory>tests</directory>
+        <directory>${tests.dir}</directory>
       </testResource>
     </testResources>
     <pluginManagement>
@@ -45,8 +52,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
-          <sourceDirectory>src</sourceDirectory>
-          <testSourceDirectory>test</testSourceDirectory>
           <configuration>
             <!-- put your configurations here -->
           </configuration>
