@@ -6,13 +6,15 @@
   <name>GestaoDeSoftware</name>
 
   <resources>
-     <resource>
-       <directory>src/main</directory>
-     </resource>
-     <resource>
-       <directory>src/tests</directory>
-     </resource>
-   </resources>
+    <resource>
+      <directory>src/main</directory>
+    </resource>
+  </resources>
+  <testResources>
+    <testResource>
+      <directory>src/test</directory>
+    </testResource>
+  </testResources>
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
