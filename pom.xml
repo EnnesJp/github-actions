@@ -36,7 +36,7 @@
     </resources>
     <testResources>
       <testResource>
-        <directory>src/test</directory>
+        <directory>src/tests</directory>
       </testResource>
     </testResources>
     <pluginManagement>
