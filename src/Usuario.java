@@ -2,6 +2,14 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class Usuario {
+
+  public static String lerInput() throws Exception {
+        BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
+
+        String entradaDoTeclado = buff.readLine();
+
+        return entradaDoTeclado;
+    }
   
   public static int lerInputInteiro() throws Exception {
     BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
