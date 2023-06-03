@@ -38,6 +38,25 @@ class DesenvolvedorTest {
       System.setIn(systemIn);
       System.setOut(systemOut);
   }
+
+  @Ignore
+	@Test
+	void testCriarTarefaDaDemanda() throws Exception {
+		final String nameTask = "First Task";
+		final String descTask = "Creating My First Task";
+		final String deadlineTask = "30";
+		
+		Desenvolvedor developer = new Desenvolvedor();
+
+		// Realizar mock das entradas do usuário 
+		developer.criarTarefaDaDemanda();
+        when(Client.lerInput()).thenReturn(nameTask);
+        when(Client.lerInput()).thenReturn(descTask);
+        when(Client.lerInput()).thenReturn(deadlineTask);
+		
+        // Verificar se a tarefa foi criada
+		assertEquals(1, developer.getDemandas().size());
+	}
 	
 	@Test
 	void testDesenvolvedorLoopException() throws Exception {

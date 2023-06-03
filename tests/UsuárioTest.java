@@ -55,6 +55,20 @@ class UsuarioTest {
 
 		assertEquals(9, Usuario.lerInputInteiro());
 	}
+
+	@Test
+	void testPrintarDemandas() throws Exception {
+		Usuario usuario = new Usuario();
+		Demanda demandaEx = new Demanda();
+		String titulo = "Titulo Demanda";
+		
+		demandaEx.setTitulo(titulo);
+		usuario.setDemandas(demandaEx);
+		
+		usuario.printarDemandas();
+		
+		assertEquals("[0] "+titulo+"\n", getOutput());
+	}
 	
 	@Test
 	void testUserLoopException() throws Exception {

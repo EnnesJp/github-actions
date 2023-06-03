@@ -40,6 +40,26 @@ class ClientTest {
       System.setOut(systemOut);
   }
 
+  @Test
+	void testSolicitarSoftware() throws Exception {
+		final String nameTask = "First Task";
+		final String descTask = "Creating My First Task";
+		final int deadlineTask = 30;
+		
+		Client clientTest = new Client();
+		Demanda	newDemanda = new Demanda();
+
+		// Realizar mock das entradas do usuário 
+		newDemanda = clientTest.solicitarSoftware();
+			when(Client.lerInput()).thenReturn(nameTask);
+			when(Client.lerInput()).thenReturn(descTask);
+			when(Client.lerInputInteiro()).thenReturn(deadlineTask);
+		
+		assertEquals(nameTask, newDemanda.getTitulo());
+		assertEquals(descTask, newDemanda.getDescricao());
+		assertEquals(deadlineTask, newDemanda.getPrazoEmDias());
+	}
+
 	@Test
 	void testClientLoopException() throws Exception {
 		provideInput("6");

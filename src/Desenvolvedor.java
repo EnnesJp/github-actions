@@ -2,6 +2,21 @@ import java.time.LocalDate;
 
 class Desenvolvedor extends Usuario {
 
+    public void criarTarefaDaDemanda() throws Exception  {
+        System.out.println("Escolha uma demanda para criar tarefa:");
+        printarDemandas();
+        int demandaSelecionada = lerInputInteiro();
+        Tarefa tarefaAtual = new Tarefa();
+        System.out.println("Digite o nome da tarefa:");
+        tarefaAtual.setTitulo(lerInput());
+        System.out.println("Informe a descricao da tarefa:");
+        tarefaAtual.setDescricao(lerInput());
+        tarefaAtual.setDataDeCriacao(LocalDate.now());
+        System.out.println("Informe o prazo em dias:");
+        tarefaAtual.setPrazoEmDias(lerInputInteiro());
+        demandas.get(demandaSelecionada).setTarefas(tarefaAtual);
+    }
+
   public void desenvolvedorLoop() throws Exception  {
 
     while(true) {
@@ -10,11 +25,11 @@ class Desenvolvedor extends Usuario {
       
       int choice = lerInputInteiro();
       if(choice == 1) {
-        System.out.println("Visualizar demanda");
+          this.consultarDemanda();
       } else if (choice == 2) {
-        System.out.println("Criar tarefa da demanda");
-      } else if (choice == 3){
-        break;
+          this.criarTarefaDaDemanda();
+      } else if (choice == 3){ 
+          break;
       } else {
         System.out.println("Error character Typed: " + choice);
         break;
